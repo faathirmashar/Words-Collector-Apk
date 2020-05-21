@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/detal_line"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:textSize="18dp"
+        android:fontFamily="arial"
+        android:textFontWeight="800"
+        android:gravity="center"
+        android:text="DETAIL DATA"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:padding="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:hint="Word"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginHorizontal="24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColor="@android:color/black"
+            android:inputType="none"
+            android:id="@+id/detail_word"
+            android:maxLength="20"
+            android:layout_weight="700"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:hint="Definition"
+        android:saveEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="400"
+        android:layout_marginHorizontal="24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="none"
+            android:textColor="@android:color/black"
+            android:id="@+id/detail"
+            android:scrollbars="vertical"
+            android:gravity="top"
+            android:lines="5"
+            android:maxLength="400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/detail_close"
+            android:text="close"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginRight="36dp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

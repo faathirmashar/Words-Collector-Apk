@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/dialogLinear"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:textSize="18dp"
+        android:fontFamily="arial"
+        android:textFontWeight="800"
+        android:gravity="center"
+        android:text="INSERT DATA"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:padding="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/word_input"
+        android:hint="Word"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:maxLength="20"
+            android:gravity="top"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/definition_input"
+        android:hint="Definition"
+        app:counterEnabled="true"
+        app:counterMaxLength="400"
+        android:layout_marginHorizontal="24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:gravity="top"
+            android:lines="5"
+            android:maxLength="400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:paddingTop="12dp"
+        android:paddingBottom="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/cancel"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="Cancel"
+            android:layout_marginRight="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn"
+            android:text="Insert"
+            android:layout_marginRight="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

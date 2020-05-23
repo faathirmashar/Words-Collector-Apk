@@ -14,7 +14,7 @@ public abstract class VocabDatabase extends RoomDatabase {
     public abstract VocabDao vocabDao();
     private static VocabDatabase instance;
 
-    public static VocabDatabase getInstance(Context context){
+    public synchronized static VocabDatabase getInstance(Context context){
         if (instance == null){
             instance = Room.databaseBuilder(context.getApplicationContext(), VocabDatabase.class, "Vocab_collector").allowMainThreadQueries().build();
         }
